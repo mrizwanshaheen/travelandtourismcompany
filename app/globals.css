@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme */
+    --background: 210 20% 98%;
+    /* #f8fafc soft white */
+    --foreground: 222.2 84% 4.9%;
+    /* dark slate text */
+
+    --card: 0 0% 100%;
+    /* white */
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Primary: Deep Teal / Royal Blue */
+    --primary: 200 100% 35%;
+    /* #006da4 roughly, trying 221 83 53 standard blue if needed but user asked for deep teal */
+    /* Let's use a nice deep teal: #008080 or better HSL 180 100% 25% */
+    /* Or specifically "deep teal or royal blue" */
+    /* Using HSL 199 89% 48% as a vibrant option, or deeper 200 90% 30% for professionalism */
+    --primary: 215 85% 45%;
+    /* Royal Blue-ish Deep Teal mix */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    /* gray text */
+
+    /* Accent: Premium Orange for CTA */
+    --accent: 25 95% 53%;
+    /* #FF6F00 -> HSL 26 100 50 */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    /* subtle gray */
+    --input: 214.3 31.8% 91.4%;
+    --ring: 215 85% 45%;
+
+    --radius: 0.5rem;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    /* Dark Theme */
+    --background: 222 47% 11%;
+    /* #0f172a */
+    --foreground: 210 40% 98%;
+    /* #e2e8f0 */
+
+    --card: 220 35% 18%;
+    /* #1e293b approx */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 50%;
+    /* Slightly lighter/brighter for dark mode visibility */
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 25 95% 53%;
+    /* Keep same orange or slightly brighter */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    /* subtle dark gray */
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Utilities */
+.container-custom {
+  @apply container mx-auto px-4 md:px-6 lg:px-8;
+}
+
+.heading-xl {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+}
+
+.heading-lg {
+  @apply text-3xl md:text-4xl font-bold tracking-tight;
+}
+
+.heading-md {
+  @apply text-2xl md:text-3xl font-semibold tracking-tight;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
