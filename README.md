@@ -1,51 +1,61 @@
-# Travel & Tourism SaaS Platform
+# Luxury Travel & Tourism Platform
 
-A modern, professional travel booking platform built with Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI.
+This project is a high-end, international-standard travel booking platform consisting of two independent applications.
 
-## Features
+## Project Structure
 
-- **Public Website with Modern UI**
-  - Hero Section with Video/Image Background
-  - Featured Destinations & Popular Tours
-  - Advanced Tour Filtering & Search
-  - Tour Detail Page with Gallery & Sticky Booking
-  - Smooth Checkout Process
-  - Responsive Design (Mobile First)
-  - Dark/Light Theme Toggle
-- **Admin Panel**
-  - Dashboard with key metrics (Revenue, Bookings)
-  - Product Management
-  - Responsive Sidebar Layout
+- **`website/`**: The public-facing luxury travel website (Next.js).
+- **`admin/`**: The private, dark-themed SaaS admin panel (Next.js).
 
 ## Tech Stack
 
-- **Framework:** Next.js 15 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Components:** Shadcn AI (Radix UI)
+- **Frontend:** Next.js 15, TypeScript
+- **Styling:** Tailwind CSS (Custom Luxury Theme)
 - **Animations:** Framer Motion
 - **Icons:** Lucide React
-- **Theming:** next-themes
+- **Charts:** Recharts (Admin)
 
 ## Getting Started
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+### 1. Installation
+Install dependencies for both projects:
+```bash
+npm run install:all
+```
 
-2. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+### 2. Running Locally
+Run the client website (Port 3000):
+```bash
+npm run dev:website
+```
 
-3. **Open:** [http://localhost:3000](http://localhost:3000)
+Run the admin dashboard (Port 3001):
+```bash
+npm run dev:admin
+```
 
-## Admin Panel
+## Live URLs (GitHub Pages)
 
-Access the admin dashboard at: [http://localhost:3000/admin](http://localhost:3000/admin)
+- **Main Website:** [https://mrizwanshaheen.github.io/travelandtourismcompany/](https://mrizwanshaheen.github.io/travelandtourismcompany/)
+- **Admin Panel:** [https://mrizwanshaheen.github.io/travelandtourismcompany/admin/](https://mrizwanshaheen.github.io/travelandtourismcompany/admin/)
 
-## Deployment
+## Deployment Configuration
 
-Deploy easily on Vercel or any Node.js hosting.
-For GitHub Pages (static export), uncomment `output: 'export'` in `next.config.ts`.
+The project is configured for **Static Export** (`output: 'export'`) to support GitHub Pages.
+- Both apps use `basePath` to handle subdirectory routing.
+- Deployment is automated via GitHub Actions (`.github/workflows/deploy.yml`).
+
+## Features
+
+### Website
+- Cinematic Hero & Modern Search
+- Grid-based Destinations with Hover Effects
+- Detailed Tour Pages with Booking Summary
+- Multi-step Checkout UI
+- Animated Success Page
+
+### Admin Panel
+- Dark SaaS Luxury Theme
+- Revenue & Booking Analytics
+- Real-time Status Management
+- Tour & Inventory Management

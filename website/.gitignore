@@ -1,0 +1,8 @@
+node_modules/
+.next/
+backup_v1/
+new_app/
+.env
+npm-debug.log
+.DS_Store
+build_log.txt
